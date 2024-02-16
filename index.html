@@ -15,10 +15,11 @@
         font-family: "Quantico", sans-serif;
         font-weight: 400;
         font-style: normal;
+        background-color: #000;
       }
 
       h1 {
-        font-size: 4em;
+        font-size: 3em;
         font-weight: 700;
       }
 
@@ -27,6 +28,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        animation: color-rotate 6s linear 0s infinite;
       }
 
       .typewriter {
@@ -54,16 +56,33 @@
         to {
           border-color: transparent;
         }
-
         50% {
           border-color: orange;
+        }
+      }
+
+      @keyframes color-rotate {
+        from {
+          color: #6666ff;
+        }
+        10% {
+          color: #0099ff;
+        }
+        50% {
+          color: #00ff00;
+        }
+        75% {
+          color: #ff3399;
+        }
+        100% {
+          color: #6666ff;
         }
       }
     </style>
   </head>
   <body>
     <div id="content">
-      <h1>Hej!</h1>
+      <h1>Otto Widegren</h1>
       <p class="typewriter">
         Jag gillar att spela <strong>Fortnite...</strong>
       </p>
