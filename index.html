@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="images/favicon.png" />
     <style>
       body {
@@ -38,8 +35,7 @@
         white-space: nowrap;
         margin: 0 auto;
         letter-spacing: 0.15em;
-        animation: typing 3.5s steps(40, end),
-          blink-caret 0.75s step-end infinite;
+        animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
       }
 
       @keyframes typing {
@@ -83,11 +79,22 @@
   </head>
   <body>
     <div id="content">
-      <img src="images/favicon.png" alt="" style="width: 50%" /><br />
+      <img src="images/favicon.png" alt="" style="width: 50%" onclick="playSound()" /><br />
       <h1>Otto Widegren</h1>
       <p class="typewriter">
-        Jag gillar att spela <strong>Fortnite...</strong>
+        Jag gillar att spela
+        <strong>Fortnite</strong>...
       </p>
     </div>
+    <script>
+      var audio = new Audio("sounds/fortnite-ch5-soundtrack.mp3");
+      function playSound() {
+        if (!audio.paused) {
+          audio.pause();
+        } else {
+          audio.play();
+        }
+      }
+    </script>
   </body>
 </html>
