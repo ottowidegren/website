@@ -1,41 +1,72 @@
 <html>
+  <head>
+    <title>Otto Widegren</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+    <style>
+      body {
+        font-family: "Quantico", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
 
-<head>
-  <title>Otto Widegren</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="images/favicon.png">
-  <style>
-    body {
-      font-family: "Quantico", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-    }
+      h1 {
+        font-size: 4em;
+        font-weight: 700;
+      }
 
-    h1 {
-      font-size: 4em;
-      font-weight: 700;
-    }
+      #content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
 
-    #content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  </style>
-</head>
+      .typewriter {
+        overflow: hidden;
+        border-right: 0.15em solid orange;
+        white-space: nowrap;
+        margin: 0 auto;
+        letter-spacing: 0.15em;
+        animation: typing 3.5s steps(40, end),
+          blink-caret 0.75s step-end infinite;
+      }
 
-<body>
+      @keyframes typing {
+        from {
+          width: 0;
+        }
 
-  <div id="content">
-    <h1>Hej!</h1>
-    <p>Jag gillar att spela <strong>Fortnite...</strong></p>
-  </div>
+        to {
+          width: 100%;
+        }
+      }
 
-</body>
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
 
+        50% {
+          border-color: orange;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <h1>Hej!</h1>
+      <p class="typewriter">
+        Jag gillar att spela <strong>Fortnite...</strong>
+      </p>
+    </div>
+  </body>
 </html>
